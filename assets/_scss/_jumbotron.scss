@@ -1,0 +1,67 @@
+.jumbotron {
+  background-color: $color-base;
+  color: white;
+  height: 70vh;
+  padding: $padding;
+  align-items: flex-end;
+  display: flex;
+
+
+  &__qoute {
+    font-size: 2.5rem;
+
+    cite {
+      margin: 2rem 0 0;
+      color: lighten(grey, 40%);
+      opacity: .8;
+      text-align: right;
+      font-style: normal;
+      font-size: 2rem;
+      display: block;
+      
+      b {
+        display: block;
+      }
+    }
+  }
+
+  &__mega-text {
+    line-height: 1;
+    font-size: 3rem;
+    opacity: .4;
+    text-indent: 3rem;
+    text-align: right;
+  }
+
+  &__big-text {
+    opacity: .8;
+    line-height: 1;
+    font-size: 6rem;
+    font-weight: bold;
+  }
+
+}
+
+@media (min-width: 1000px) {
+  .jumbotron {
+    height: 80vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: $padding--desktop;
+
+    &__img {
+      height: auto;
+      border-radius: 2rem;
+    }
+
+    &__mega-text {
+      font-size: 7rem;
+      text-indent: 5rem;
+    }
+  
+    &__big-text {
+      text-align: right;
+      font-size: 10rem;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.section {
+  padding: $padding;
+
+  &__link {
+    margin: 1rem 0 0;
+    padding: .7rem 1rem .7rem 0;
+    display: inline-block;
+    color: $color-base;
+    position: relative;
+    overflow: hidden;
+    transition: .3s ease-out;
+
+    &:hover {
+      color: white;
+      padding: .7rem 1rem;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 100%;
+      background-color: $color-base;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      transform: translateY(3.7rem);
+      transition: transform .5s ease;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      transform: translateX(0);
+    }
+  }
+}
+.placeholder {
+  margin: 2.5rem;
+}
+
+@media (min-width: 1000px) {
+  .section {
+    padding: $padding--desktop;
+
+    &--w-60 {
+      width: 60%;
+    }
+  }
+}

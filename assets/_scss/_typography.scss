@@ -1,0 +1,25 @@
+.heading {
+  color: lighten(grey, 5%);
+
+  &--main {
+    font-size: 3rem;
+  }
+
+  &--sub {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin: 0 0 1rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.6rem;
+}
+
+@media(min-width: 1000px) {
+  .paragraph {
+    &--w-60 {
+      width: 60%;
+    }
+  }
+}
