@@ -1,6 +1,10 @@
 .section {
   padding: $padding;
 
+  &--npad {
+    padding: 0 0;
+  }
+
   &__link {
     margin: 1rem 0 0;
     padding: .7rem 1rem .7rem 0;
@@ -33,6 +37,11 @@
       transform: translateX(0);
     }
   }
+
+  &__list {
+    padding: $padding;
+    list-style-type: square;
+  }
 }
 .placeholder {
   margin: 2.5rem;
@@ -42,8 +51,16 @@
   .section {
     padding: $padding--desktop;
 
+    &--npad {
+      padding: 0 0;
+    }
+
     &--w-60 {
       width: 60%;
+    }
+
+    &__list {
+      padding: $padding;
     }
   }
 }

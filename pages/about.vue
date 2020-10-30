@@ -21,9 +21,9 @@
     <section class="section">
       <h2 class="heading heading--sub">Executive Team</h2>
       <div class="row row--justify-spaced row--mt2">
-        <div class="col-2" v-for="(person, index) in excos" :key="index">
+        <div class="col-2" v-for="(person, index) in excos" :key="index" @click="modal = person">
           <div class="card card--exco">
-            <img :src="require(`~/assets/img/${person.img}.jpg`)" class="card__img" alt="Photo of David Utulor, CEO Diatheke Empire" />
+            <img :src="require(`~/assets/img/${person.img}.jpg`)" class="card__img" :alt="`Photo of ${person.name}, ${person.title} Diatheke Empire`" />
             <div class="card__body">
               <h3 class="card__heading">{{person.name}}</h3>
               <p class="card__paragraph">{{person.title}}</p>
@@ -32,9 +32,9 @@
         </div>
       </div>
       <div class="row row--justify-spaced row--mt2">
-        <div class="col-2" v-for="(person, index) in excos_2" :key="index">
+        <div class="col-2" v-for="(person, index) in excos_2" :key="index" @click="modal = person">
           <div class="card card--exco">
-            <img :src="require(`~/assets/img/${person.img}.jpg`)" class="card__img" alt="Photo of David Utulor, CEO Diatheke Empire" />
+            <img :src="require(`~/assets/img/${person.img}.jpg`)" class="card__img" :alt="`Photo of ${person.name}, ${person.title} Diatheke Empire`" />
             <div class="card__body">
               <h3 class="card__heading">{{person.name}}</h3>
               <p class="card__paragraph">{{person.title}}</p>
@@ -44,9 +44,9 @@
       </div>
       <div class="row row--justify-center row--mt2">
         <div class="col-2"></div>
-        <div class="col-2" v-for="(person, index) in excos_3" :key="index">
+        <div class="col-2" v-for="(person, index) in excos_3" :key="index" @click="modal = person">
           <div class="card card--exco">
-            <img :src="require(`~/assets/img/${person.img}.jpg`)" class="card__img" alt="Photo of David Utulor, CEO Diatheke Empire" />
+            <img :src="require(`~/assets/img/${person.img}.jpg`)" class="card__img" :alt="`Photo of ${person.name}, ${person.title} Diatheke Empire`" />
             <div class="card__body">
               <h3 class="card__heading">{{person.name}}</h3>
               <p class="card__paragraph">{{person.title}}</p>
@@ -56,18 +56,22 @@
         <div class="col-2"></div>
       </div>
     </section>
+    <about-modal v-if="modal" :data="modal" @close="modal = null" />
   </main>
 </template>
 
 <script>
 import AboutJumbotronVue from '~/components/AboutJumbotron.vue'
+import AboutModalVue from '~/components/AboutModal.vue'
 
 export default {
   components: {
-    'about-jumbotron': AboutJumbotronVue
+    'about-jumbotron': AboutJumbotronVue,
+    'about-modal': AboutModalVue
   },
   data() {
     return {
+      modal: null,
       excos: [
         {
           name: 'David Utulor',
@@ -80,7 +84,7 @@ export default {
         {
           name: 'Eric Limoh',
           title: 'COO',
-          img: 'David-Utulor',
+          img: 'Limoh',
           about: `
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime omnis earum minus voluptatem quidem distinctio. Ex aliquid culpa harum fuga, excepturi tempore esse neque dicta doloribus dignissimos iure sapiente ea.
           `
@@ -159,7 +163,3 @@ export default {
 
 }
 </script>
-
-<style>
-
-</style>

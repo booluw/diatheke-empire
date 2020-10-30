@@ -1,12 +1,12 @@
 .heading {
   color: lighten(grey, 5%);
+  text-transform: uppercase;
 
   &--main {
     font-size: 3rem;
   }
 
   &--sub {
-    text-transform: uppercase;
     font-size: 1.8rem;
     margin: 0 0 1rem;
   }

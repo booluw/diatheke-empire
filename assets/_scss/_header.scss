@@ -7,6 +7,15 @@
   position: relative;
   background-color: white;
 
+  &--fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    border-bottom: .2rem solid $color-base
+  }
+
   &__logo {
     width: 12rem;
     height: auto;

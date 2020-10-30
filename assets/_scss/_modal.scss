@@ -1,0 +1,95 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(black, .7);
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 100%;
+  height: 97vh;
+  margin: 1rem;
+  background-color: white;
+  border-radius: .4rem;
+  overflow-y: auto;
+
+  &__img {
+    width: 100%;
+    height: 50%;
+    border-radius: .4rem .4rem 2rem 2rem;
+  }
+
+  &__content {
+    padding: 1rem $padding $padding;
+  }
+
+  &__heading {
+    color: $color-base;
+  }
+
+  .__header {
+    margin: 0 0 1rem;
+
+    p {
+      opacity: .8;
+    }
+  }
+
+  &__btn {
+    outline: none;
+    border: .2rem solid $color-base;
+    border-radius: 50%;
+    padding: 0 .8rem;
+    background-color: transparent;
+    color: $color-base;
+    font-size: 2.7rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    transition: .3s ease-out;
+
+    &:hover {
+      background-color: $color-base;
+      color: white;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .modal {
+    width: 50%;
+    height: 80vh;
+    padding: $padding;
+
+    &__body {
+      display: flex;
+    }
+
+    &__img {
+      width: 40%;
+      height: 30%;
+      border-radius: 2rem;
+    }
+
+    &__btn {
+      padding: 0 1.3rem;
+      font-size: 4rem;
+      top: 8.2vh;
+      right: 24%;
+      background-color: white;
+    }
+  }
+}
