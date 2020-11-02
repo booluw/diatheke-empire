@@ -7,7 +7,7 @@
         Here everyone matters and we are committed to mutual development. We believe in an inclusive system of operation where dignity, peculiarity and opinion of every individual is highly respected.
         We see each other as family, hence our determination to add value to one another.
         <br /><br />
-        In Diatheke, everyone is a leader and WE all make up te full Diatheke story.
+        In Diatheke, everyone is a leader and WE all make up the full Diatheke story.
       </p>
     </section>
     <section class="section section--w-60">
@@ -131,6 +131,34 @@ export default {
   name: 'CareerVue',
   components: {
     'career-jumbotron': CareerJumbotronVue
+  },
+  head() {
+    return {
+      title: 'Careers || Diatheke Empire',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Diatheke Empire is excited to welcome creative and goal oriented individuals with unique skill sets and value system, who are ready to unleash their creativity and determined to making a difference in Africa and beyond.'
+        },
+        {
+          property: 'og:title',
+          content: 'Careers || Diatheke Empire'
+        },
+        {
+          property: 'og:description',
+          content: 'Diatheke Empire is excited to welcome creative and goal oriented individuals with unique skill sets and value system, who are ready to unleash their creativity and determined to making a difference in Africa and beyond.'
+        },
+        {
+          property: 'og:url',
+          content: 'https://diathekeempire.com/career'
+        },
+        {
+          property: 'twitter:card',
+          content: 'summary_large_image'
+        }
+      ]
+    }
   }
 }
 </script>

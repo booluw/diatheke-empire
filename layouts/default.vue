@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="body">
     <header class="header" v-scroll="handleScroll" :class="{'header--fixed': scroll > 20}">
       <input type="checkbox" id="toggle" style="display: none;" ref="toggle"/>
       <nuxt-link to="/">
@@ -16,6 +16,20 @@
         <div class="line"></div>
       </label>
     </header>
+    <section class="social" :class="{'social--show': scroll > 100}">
+      <a href="//facebook.com/diathekeempire" target="_blank" rel="noopener" class="social__link" title="Follow Diatheke Empire on Facebook">
+        <i class="ion icon ion-logo-facebook"></i>
+      </a>
+      <a href="//twitter.com/diathekeempire" target="_blank" rel="noopener" class="social__link" title="Follow Diatheke Empire on Twitter">
+        <i class="ion icon ion-logo-twitter"></i>
+      </a>
+      <a href="//linkedin.com/diathekeempire" target="_blank" rel="noopener" class="social__link" title="Connect with Diatheke Empire on Linkedin">
+        <i class="ion icon ion-logo-linkedin"></i>
+      </a>
+      <a href="//instagram.com/diathekeempire" target="_blank" rel="noopener" class="social__link" title="Follow Diatheke Empire on Instagram">
+        <i class="ion icon ion-logo-instagram"></i>
+      </a>
+    </section>
     <Nuxt />
   </div>
 </template>

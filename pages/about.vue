@@ -160,6 +160,33 @@ export default {
       ]
     }
   },
-
+  head() {
+    return {
+      title: 'About Us || Diatheke Empire',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'About Diatheke: Diatheke is committed to improving livelihood, through regeneration of capital and distribution of resources for a stable economy.'
+        },
+        {
+          property: 'og:title',
+          content: 'About Us || Diatheke Empire'
+        },
+        {
+          property: 'og:description',
+          content: 'About Diatheke: Diatheke is committed to improving livelihood, through regeneration of capital and distribution of resources for a stable economy.'
+        },
+        {
+          property: 'og:url',
+          content: 'https://diathekeempire.com/about'
+        },
+        {
+          property: 'twitter:card',
+          content: 'summary_large_image'
+        }
+      ]
+    }
+  }
 }
 </script>

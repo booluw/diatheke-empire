@@ -1,6 +1,6 @@
 <template>
   <section class="modal-container">
-    <div class="modal">
+    <div class="modal" tabindex="10">
       <button class="modal__btn ion icon ion-ios-close" @click="$emit('close')"></button>
       <div class="modal__body">
           <img :src="require(`~/assets/img/${data.img}.jpg`)" class="modal__img" :alt="`Photo of ${data.name}, ${data.title} Diatheke Empire`" />

@@ -101,6 +101,34 @@ export default {
   name: 'HomePage',
   components: {
     'app-jumbotron': AppJumbotronVue
+  },
+  head() {
+    return {
+      title: 'Home || Diatheke Empire',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Diatheke Empire is a private owned investment company committed to better lives of populace and transform Africa.'
+        },
+        {
+          property: 'og:title',
+          content: 'Home || Diatheke Empire'
+        },
+        {
+          property: 'og:description',
+          content: 'Diatheke Empire is a private owned investment company committed to better lives of populace and transform Africa.'
+        },
+        {
+          property: 'og:url',
+          content: 'https://diathekeempire.com/'
+        },
+        {
+          property: 'twitter:card',
+          content: 'summary_large_image'
+        }
+      ]
+    }
   }
 }
 </script>
