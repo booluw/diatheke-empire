@@ -16,6 +16,7 @@ body {
   font-size: 1.8rem;
   font-family: Urbanist, sans-serif;
   background-color: white;
+  line-height: 1.6;
 }
 
 @font-face {
@@ -31,6 +32,52 @@ body {
 h1, h2, h3,
 h4, h5, h6 {
   font-family: EBGaramond, serif;
+}
+
+.jumbotron {
+  padding: 3rem 2rem;
+  background-color: #ed3237;
+  height: 90vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.8))), url("~/assets/img/Diatheke wall.jpg");
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8)), url("~/assets/img/Diatheke wall.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  line-height: 1;
+}
+
+.jumbotron__heading {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+}
+
+.jumbotron__paragraph {
+  -webkit-margin-before: 2rem;
+          margin-block-start: 2rem;
+  color: #f2f2f2;
+}
+
+.jumbotron .row {
+  height: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .jumbotron {
+    padding: 5rem;
+    line-height: 1.6;
+    height: 85vh;
+  }
+  .jumbotron__heading {
+    line-height: 1.2;
+    font-size: 5rem;
+  }
+  .jumbotron__paragraph {
+    -webkit-margin-before: 2rem;
+            margin-block-start: 2rem;
+    color: #f2f2f2;
+  }
 }
 
 .nav {
@@ -211,6 +258,10 @@ h4, h5, h6 {
           align-items: center;
   padding: 2rem;
   background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 99;
 }
 
 .header__logo {
