@@ -17,6 +17,7 @@ body {
   font-family: Urbanist, sans-serif;
   background-color: white;
   line-height: 1.6;
+  color: black;
 }
 
 @font-face {
@@ -32,19 +33,20 @@ body {
 h1, h2, h3,
 h4, h5, h6 {
   font-family: EBGaramond, serif;
+  letter-spacing: .1rem;
 }
 
 .jumbotron {
   padding: 3rem 2rem;
   background-color: #ed3237;
   height: 90vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.8))), url("~/assets/img/Diatheke wall.jpg");
-  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8)), url("~/assets/img/Diatheke wall.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(black)), url("~/assets/img/Diatheke wall.jpg");
+  background: linear-gradient(to bottom, transparent, black), url("~/assets/img/Diatheke wall.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
-  line-height: 1;
+  line-height: 1.4;
 }
 
 .jumbotron__heading {
@@ -309,6 +311,57 @@ h4, h5, h6 {
     left: auto;
     bottom: auto;
     border: none;
+  }
+}
+
+.section {
+  padding: 3rem 2rem;
+  background-color: white;
+}
+
+.section--bg {
+  background-color: #f6f6f6;
+}
+
+.section__heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: gray;
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
+}
+
+.section__link {
+  display: inline-block;
+  color: #ed3237;
+  text-transform: capitalize;
+  margin: 1rem 0;
+  font-weight: 600;
+  position: relative;
+}
+
+.section__link::after {
+  position: absolute;
+  content: "";
+  background-color: transparent;
+  border-bottom: 0.2rem solid #ed3237;
+  top: 0;
+  bottom: -.3rem;
+  left: 0;
+  right: 0;
+  width: 40%;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.section__link:hover::after {
+  width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 5rem;
   }
 }
 /*# sourceMappingURL=master-styles.css.map */

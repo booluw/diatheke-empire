@@ -1,0 +1,50 @@
+.section {
+  padding: 3rem 2rem;
+  background-color: white;
+
+  &--bg {
+    background-color: lighten($secondary-color, 40);
+  }
+
+  &__heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: darken(white, 50);
+    margin-block-end: 1rem;
+  }
+
+  &__link {
+    display: inline-block;
+    color: $primary-color;
+    text-transform: capitalize;
+    margin: 1rem 0;
+    font-weight: 600;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: transparent;
+      border-bottom: .2rem solid $primary-color;
+      top: 0;
+      bottom: -.3rem;
+      left: 0;
+      right: 0;
+      width: 40%;
+      transition: 300ms ease-in-out;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 5rem;
+  }
+}

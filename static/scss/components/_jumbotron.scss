@@ -2,12 +2,12 @@
   padding: 3rem 2rem;
   background-color: $primary-color;
   height: 90vh;
-  background: linear-gradient(to bottom, transparent, rgba(black, .8)), url('~/assets/img/Diatheke wall.jpg');
+  background: linear-gradient(to bottom, transparent, black), url('~/assets/img/Diatheke wall.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
-  line-height: 1;
+  line-height: 1.4;
 
   &__heading {
     font-size: 3.5rem;
