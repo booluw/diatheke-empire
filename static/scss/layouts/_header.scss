@@ -1,0 +1,50 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: white;
+
+  &__logo {
+    height: auto;
+    width: 12rem;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-top: .1rem solid $secondary-color;
+    position: fixed;
+    top: 7rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: translateX(-100%);
+
+    padding: 2rem;
+    transition: 300ms ease-in-out;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    padding: 2rem 5rem;
+
+    &__logo {
+      width: 15rem;
+    }
+
+    &__nav {
+      padding: 0;
+      display: block;
+      transform: translateX(0);
+      position: relative;
+      top: auto;
+      right: auto;
+      left: auto;
+      bottom: auto;
+      border: none;
+    }
+  }
+}
