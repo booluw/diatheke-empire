@@ -42,6 +42,7 @@
       color: $primary-color;
       padding: .5rem 0;
       margin-inline-end: 3rem;
+      font-weight: 400;
 
       & .lni {display: none;}
 
@@ -59,17 +60,17 @@
         padding: 1.5rem 0;
         margin-block-end: .5rem;
         background-color: transparent;
-        color: $secondary-color;
+        color: darken($secondary-color, 20);
         font-size: 1.4rem;
         text-transform: capitalize;
-        border-bottom: .1rem solid rgba(black, .1);
         transition: 100ms ease-in-out;
-
+        border-bottom: .1rem solid rgba(black, .1);          
+        
         &:last-of-type {border: none;}
 
         &:hover {
-          color: darken($secondary-color, 20);
-          border-color: currentColor;
+          color: darken($secondary-color, 40);
+          //border-bottom-color: currentColor;
         }
       }
 
@@ -85,7 +86,7 @@
         right: auto;
         left: auto;
         background-color: lighten($secondary-color, 40);
-        border-radius: .2rem;
+        border-radius: .3rem;
       }
     }
   }
