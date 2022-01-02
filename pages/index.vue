@@ -63,6 +63,22 @@
         </div>
       </div>
     </section>
+    <section class="section section--no-padding section--bg">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-md-6 p-0">
+          <img src="~/assets/img/LUE.jpg" class="section__img section__img--padded" />
+        </div>
+        <div class="col-md-6 p-0">
+          <h2 class="section__heading">Our Initiatives</h2>
+          <p class="section__paragraph">
+            Entrepreneurship isn't just about starting a business or leading an enterprise, we believe it is a skill-set and way of thinking that drives creativity and innovation. Its core is about building solutions to problems and taking the right steps to make them a reality. Entrepreneurs are not just business owners but passionate problem solvers
+          </p>
+          <nuxt-link to="/initiative" class="section__link">
+            learn more
+          </nuxt-link>
+        </div>
+      </div>
+    </section>
   </section>
 </template>
 

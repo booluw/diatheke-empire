@@ -358,6 +358,10 @@ h4, h5, h6 {
   background-color: #f6f6f6;
 }
 
+.section--no-padding {
+  padding: 3rem 0;
+}
+
 .section__heading {
   font-size: 2rem;
   text-transform: uppercase;
@@ -394,8 +398,24 @@ h4, h5, h6 {
   width: 100%;
 }
 
+.section__img {
+  width: 100%;
+  height: auto;
+}
+
+.section__img--padded {
+  padding: 2rem;
+  background-color: transparent;
+}
+
 @media screen and (min-width: 1200px) {
   .section {
+    padding: 5rem;
+  }
+  .section--no-padding {
+    padding: 0 5rem;
+  }
+  .section__img--padded {
     padding: 5rem;
   }
 }
