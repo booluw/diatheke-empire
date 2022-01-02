@@ -1,0 +1,36 @@
+.card {
+
+  &--gradient {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: .3rem;
+    box-shadow: 0 0 20px lighten($secondary-color, 35);
+    border-radius: .5rem;
+    margin-block-end: 3rem;
+    background-color: $primary-color;
+    transition: 300ms ease-in-out;
+
+    & .card__body {
+      background-color: $secondary-color;
+      font-size: 2rem;
+      font-family: Urbanist, sans-serif;
+      text-transform: uppercase;
+      color: white;
+      padding: .5rem 1rem;
+    }
+
+    & .card__img {
+      transform: scale(1.12);
+    }
+
+    &:hover {
+      transform: translateY(-1.5rem)//scale(1.1);
+    }
+  }
+
+  &__img {
+    transition: 300ms ease-in-out;
+    width: 100%;
+    height: auto;
+  }
+}

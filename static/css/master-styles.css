@@ -21,19 +21,54 @@ body {
 }
 
 @font-face {
-  font-family: EBGaramond;
-  src: url("./fonts/EBGaramond.ttf");
-}
-
-@font-face {
   font-family: Urbanist;
   src: url("./fonts/Urbanist.ttf");
 }
 
 h1, h2, h3,
 h4, h5, h6 {
-  font-family: EBGaramond, serif;
+  font-family: Urbanist, sans-serif;
   letter-spacing: .1rem;
+}
+
+.card--gradient {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: .3rem;
+  -webkit-box-shadow: 0 0 20px #e9e9e9;
+          box-shadow: 0 0 20px #e9e9e9;
+  border-radius: .5rem;
+  -webkit-margin-after: 3rem;
+          margin-block-end: 3rem;
+  background-color: #ed3237;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.card--gradient .card__body {
+  background-color: #909090;
+  font-size: 2rem;
+  font-family: Urbanist, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  padding: .5rem 1rem;
+}
+
+.card--gradient .card__img {
+  -webkit-transform: scale(1.12);
+          transform: scale(1.12);
+}
+
+.card--gradient:hover {
+  -webkit-transform: translateY(-1.5rem);
+          transform: translateY(-1.5rem);
+}
+
+.card__img {
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  width: 100%;
+  height: auto;
 }
 
 .jumbotron {
