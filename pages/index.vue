@@ -30,15 +30,8 @@
           </nuxt-link>
         </div>
       </div>
-      <div class="row m-0 justify-content-start align-items-start" style="margin-top: 5rem;">
-        <div class="col-md-3 p-0">
-          <nuxt-link to="/investment#energy" class="card card--gradient">
-            <img src="~/assets/img/energy-sector.jpg" class="card__img" />
-            <div class="card__body">
-              Energy
-            </div>
-          </nuxt-link>
-        </div>
+      <br /><br />
+      <div class="row m-0 justify-content-start align-items-center">
         <div class="col-md-3 p-0">
           <nuxt-link to="/investment#agriculture" class="card card--gradient">
             <img src="~/assets/img/agricultural-sector.jpg" class="card__img" />
@@ -51,6 +44,14 @@
           <nuxt-link to="/investment#education" class="card card--gradient">
             <img src="~/assets/img/education.jpg" class="card__img" /><div class="card__body">
               Education
+            </div>
+          </nuxt-link>
+        </div>
+        <div class="col-md-3 p-0">
+          <nuxt-link to="/investment#energy" class="card card--gradient">
+            <img src="~/assets/img/energy-sector.jpg" class="card__img" />
+            <div class="card__body">
+              Energy
             </div>
           </nuxt-link>
         </div>

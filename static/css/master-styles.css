@@ -31,6 +31,20 @@ h4, h5, h6 {
   letter-spacing: .1rem;
 }
 
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-margin-end: 2rem;
+          margin-inline-end: 2rem;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
 .card--gradient {
   display: inline-block;
   overflow: hidden;
@@ -64,11 +78,49 @@ h4, h5, h6 {
           transform: translateY(-1.5rem);
 }
 
+.card--relative {
+  position: relative;
+}
+
+.card--relative .card__body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: -1;
+  -webkit-transition: z-index 300ms ease-in-out;
+  transition: z-index 300ms ease-in-out;
+}
+
+.card--relative:hover .card__body {
+  z-index: 1;
+}
+
 .card__img {
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
   width: 100%;
   height: auto;
+}
+
+.card__heading {
+  font-weight: 400;
 }
 
 .jumbotron {
@@ -82,6 +134,13 @@ h4, h5, h6 {
   background-repeat: no-repeat;
   color: white;
   line-height: 1.4;
+}
+
+.jumbotron--investment {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(black)), url("~/assets/img/energy-sector.jpg");
+  background: linear-gradient(to bottom, transparent, black), url("~/assets/img/energy-sector.jpg");
+  background-size: cover;
+  background-position: bottom;
 }
 
 .jumbotron__heading {
@@ -104,7 +163,7 @@ h4, h5, h6 {
   .jumbotron {
     padding: 5rem;
     line-height: 1.6;
-    height: 85vh;
+    min-height: 85vh;
   }
   .jumbotron__heading {
     line-height: 1.2;
@@ -283,6 +342,97 @@ h4, h5, h6 {
   }
 }
 
+.timeline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.timeline__time {
+  position: relative;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  padding: 2rem 3rem 4rem;
+  border-left: 0.5rem solid #909090;
+}
+
+.timeline__time::after {
+  position: absolute;
+  top: 2.5rem;
+  left: -1.7rem;
+  content: '';
+  padding: 1.5rem;
+  background-color: #909090;
+  border-radius: 50%;
+}
+
+.timeline__heading {
+  font-size: 3rem;
+  color: #909090;
+}
+
+.figure {
+  position: relative;
+  border-radius: .3rem;
+  overflow: hidden;
+  background-color: black;
+  margin-block: 2rem;
+}
+
+.figure:hover .figure__caption {
+  opacity: 1;
+}
+
+.figure__img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.figure__caption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  opacity: 0;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.figure__heading {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -406,6 +556,21 @@ h4, h5, h6 {
 .section__img--padded {
   padding: 2rem;
   background-color: transparent;
+}
+
+.section__paragraph span {
+  color: #ed3237;
+  display: block;
+  margin-block: 1rem;
+  font-size: 2.5rem;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.m-0 {
+  margin: 0 !important;
 }
 
 @media screen and (min-width: 1200px) {

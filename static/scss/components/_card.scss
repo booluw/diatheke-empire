@@ -1,4 +1,9 @@
 .card {
+  display: flex;
+  flex-direction: column;
+  margin-inline-end: 2rem;
+  border-radius: .5rem;
+  overflow: hidden;
 
   &--gradient {
     display: inline-block;
@@ -28,9 +33,35 @@
     }
   }
 
+  &--relative {
+    position: relative;
+
+    & .card__body {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: rgba(black, .6);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: -1;
+      transition: z-index 300ms ease-in-out;
+    }
+
+    &:hover .card__body {z-index: 1;}
+  }
+
   &__img {
     transition: 300ms ease-in-out;
     width: 100%;
     height: auto;
+  }
+
+  &__heading {
+    font-weight: 400;
   }
 }

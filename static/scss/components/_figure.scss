@@ -1,0 +1,40 @@
+.figure {
+  position: relative;
+  border-radius: .3rem;
+  overflow: hidden;
+  background-color: black;
+  margin-block: 2rem;
+
+  &:hover {
+    & .figure__caption {
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__caption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(black, .8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    opacity: 0;
+    transition: 300ms ease-in-out;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+}

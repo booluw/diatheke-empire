@@ -9,6 +9,12 @@
   color: white;
   line-height: 1.4;
 
+  &--investment {
+    background: linear-gradient(to bottom, transparent, black), url('~/assets/img/energy-sector.jpg');    
+    background-size: cover;
+    background-position: bottom;
+  }
+
   &__heading {
     font-size: 3.5rem;
     text-transform: uppercase;
@@ -29,7 +35,7 @@
   .jumbotron {
     padding: 5rem;
     line-height: 1.6;
-    height: 85vh;
+    min-height: 85vh;
 
     &__heading {
       line-height: 1.2;

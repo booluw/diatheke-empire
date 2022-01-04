@@ -6,16 +6,11 @@
     </nuxt-link>
     <nav class="header__nav">
       <ul class="nav">
-        <li class="nav__dropdown">
+        <li>
           <nuxt-link to="/about-us" class="nav__link">
             About us
             <i class="lni lni-chevron-right"></i>
           </nuxt-link>
-          <div class="nav__dropdown-container">
-            <nuxt-link to="/about-us" class="nav__dropdown-link">Overview</nuxt-link>
-            <nuxt-link to="/about-us#history" class="nav__dropdown-link">History</nuxt-link>
-            <nuxt-link to="/about-us#leadership" class="nav__dropdown-link">Leadership</nuxt-link>
-          </div>
         </li>
         <li class="nav__dropdown">
           <nuxt-link to="/investment" class="nav__link">

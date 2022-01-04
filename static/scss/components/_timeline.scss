@@ -1,0 +1,31 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+//  background-color: white;
+
+  &__time {
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 2rem 3rem 4rem;
+    border-left: .5rem solid $secondary-color;
+
+    &::after {
+      position: absolute;
+      top: 2.5rem;
+      left: -1.7rem;
+      content: '';
+      padding: 1.5rem;
+      background-color: $secondary-color;
+      border-radius: 50%;
+    } 
+  }
+
+  &__heading {
+    font-size: 3rem;
+    color: $secondary-color;
+  }
+}
